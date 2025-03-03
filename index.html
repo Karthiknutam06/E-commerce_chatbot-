@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ECommerce Chatbot</title>
+    <link rel="icon" type="image/png" href="images/faav.jpg">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="chatbot-container">
+        <div class="chat-header">
+            <h2>🛍️ ECommerce Chatbot</h2>
+            <button id="close-chat">✖</button>
+        </div>
+        <div class="chat-body" id="chat-body">
+            <div class="message bot-message">
+                <div class="message-text">Hello! Ask me about products, deals, or recommendations.</div>
+            </div>
+        </div>
+        <div class="chat-footer">
+            <input type="text" id="user-input" placeholder="What are you looking for?">
+            <button id="send-btn">Ask here</button>
+        </div>
+        <div id="payment-popup" class="payment-popup">
+            <div class="payment-container">
+                <h2>Complete Your Purchase</h2>
+                <p><strong>Product:</strong> <span id="payment-product-name"></span></p>
+                <p><strong>Price:</strong> <span id="payment-product-price"></span></p>
+                <input type="text" id="card-number" placeholder="Card Number (16 digits)" maxlength="16">
+                <input type="text" id="expiry-date" placeholder="Expiry Date (MM/YY)">
+                <input type="text" id="cvv" placeholder="CVV (3 digits)" maxlength="3">
+                <button onclick="processPayment()">Pay Now</button>
+                <button class="cancel-btn" onclick="closePaymentPopup()">Cancel</button>
+            </div>
+        </div>
+        
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
